@@ -1,0 +1,113 @@
+body {
+  /* background-image: url("images/fish.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain; */
+  background-color: rgb(240, 240, 230);
+  border: 0;
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+.header img {
+  width: 100%;
+}
+
+.location,
+.cooking-time,
+.spicy {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3%;
+}
+.container {
+  margin-top: 1%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 5%;
+}
+.container img {
+  height: 22vh;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2%;
+}
+
+/* the following hover animation learned from https://www.youtube.com/watch?v=tF3RE5CGt9U */
+.image-wrap {
+  position: relative;
+}
+.content {
+  font-family: skia;
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  font-size: 2em;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 769px) {
+  .image-wrap > img,
+  .image-wrap > .content {
+    transition: 200ms ease-in-out;
+  }
+
+  .content {
+    opacity: 0;
+  }
+  .image-wrap:hover > .content {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 425px) and (max-width: 769px) {
+  .image-wrap {
+    pointer-events: none;
+  }
+  .content {
+    position: relative;
+    padding: 0;
+    font-size: 1em;
+    background: rgb(240, 240, 230);
+  }
+  .container {
+    gap: 3%;
+  }
+  .header {
+    grid-template-columns: 45% 1fr;
+  }
+}
+@media screen and (max-width: 425px) {
+  .location,
+  .cooking-time,
+  .spicy {
+    grid-template-columns: 1fr;
+  }
+  .container img {
+    height: 18vh;
+  }
+  .image-wrap {
+    pointer-events: none;
+  }
+  .content {
+    position: relative;
+    padding: 0;
+    font-size: 1em;
+    background: rgb(240, 240, 230);
+  }
+  .container {
+    gap: 3%;
+  }
+  .header {
+    grid-template-columns: 70% 1fr;
+  }
+}
