@@ -1,0 +1,137 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgb(240, 240, 230);
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0%;
+}
+/* https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01 */
+.wrapp {
+  display: flex;
+  margin: 0%;
+  height: 100vh;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 50%;
+}
+.recipe_photo {
+  background: url(three-cups.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4%;
+}
+h1 {
+  margin-top: 5%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+h2 {
+  margin-top: 2%;
+}
+p,
+h2,
+.values {
+  background-color: rgb(203, 203, 203);
+}
+.ing_steps,
+.nutrition {
+  display: flex;
+  box-sizing: border-box;
+}
+.box_ingredients {
+  width: 20%;
+  height: 83%;
+  background-color: rgb(203, 203, 203);
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+.box_steps {
+  width: 50%;
+  height: 83%;
+  background-color: rgb(203, 203, 203);
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin-top: 5px;
+  margin-left: 15px;
+  /* margin-left: 260px;
+  margin-right: 260px; */
+}
+.box_nutrition {
+  width: 83.5%;
+  height: 70%;
+  background-color: rgb(203, 203, 203);
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin-left: 20px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(152, 24, 24);
+}
+@media screen and (max-width: 1000px) {
+  .box_ingredients {
+    height: 90%;
+  }
+  .box_steps {
+    height: 90%;
+  }
+}
+@media screen and (max-width: 790px) {
+  .row {
+    flex-direction: column;
+  }
+  .column {
+    display: block;
+    height: 50%;
+  }
+
+  .ing_steps,
+  .nutrition {
+    display: block;
+    text-align: center;
+  }
+  .box_nutrition {
+    height: 40%;
+    margin-top: 8px;
+    width: 60%;
+    margin-left: 12%;
+  }
+  .box_steps {
+    width: 60%;
+    margin-left: 12%;
+  }
+  .box_ingredients {
+    width: 60%;
+    margin-left: 12%;
+  }
+  h1 {
+    margin-left: 0%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,85 @@
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: rgb(240, 240, 230);
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0%;
+}
+/* https://dev.to/drews256/ridiculously-easy-row-and-column-layouts-with-flexbox-1k01 */
+.wrapp {
+  display: flex;
+  margin: 0%;
+  height: 100vh;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 50%;
+}
+.about_photo {
+  background: url(about.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4%;
+}
+h1 {
+  margin-top: 10%;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+p {
+  background-color: rgb(203, 203, 203);
+}
+.info {
+  background-color: rgb(203, 203, 203);
+  width: 83%;
+  height: auto;
+  border-radius: 10px;
+  padding: 20px 40px;
+  margin-top: 80px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(152, 24, 24);
+}
+@media screen and (max-width: 790px) {
+  .row {
+    flex-direction: column;
+  }
+  .column {
+    display: block;
+    height: 50%;
+  }
+  .about_photo {
+    background-size: cover;
+    margin: auto;
+  }
+  .info {
+    margin-top: auto;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
