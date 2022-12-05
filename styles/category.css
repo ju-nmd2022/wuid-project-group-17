@@ -10,6 +10,36 @@ body {
   margin-right: 10%;
 }
 
+.topnav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  font-family: skia;
+  padding: 1em;
+  font-size: 1.5em;
+  gap: 1em;
+  text-align: center;
+  align-items: center;
+}
+.topnav a {
+  text-decoration: none;
+  color: black;
+}
+.topnav input {
+  border: none;
+  padding: 1em;
+  background-color: rgb(240, 240, 230);
+  visibility: hidden;
+}
+.searching-area {
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  overflow: hidden;
+  align-items: center;
+}
+.searching-area img {
+  object-fit: contain;
+}
+
 .header {
   display: grid;
   grid-template-columns: 30% 1fr;
