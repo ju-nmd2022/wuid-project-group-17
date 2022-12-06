@@ -1,21 +1,27 @@
 // the star rating is learned from https://www.youtube.com/watch?v=fQIerHqB71w&t=11s
-const allStars = document.querySelectorAll(".star");
+//const allStars = dish.querySelectorAll(".star");
 
+let dish = document.querySelectorAll(".dish")
+for (let i = 0; i < dish.length; i++) {
+    const dishStars = dish[i].querySelectorAll(".star");
 
-allStars.forEach((star, i) => {
-    star.onclick = function() {
-       let current_star_level = i +1;
-
-       allStars.forEach((star, j) => {
-        if(current_star_level >= j + 1) {
-        star.innerHTML = "&#9733";
-        }else {
-        star.innerHTML= "&#9734";
-       } } ) 
-       localStorage.rate("rating","true")
+    dishStars.forEach((star, i) => {
+        star.onclick = function() {
+           let current_star_level = i +1;
+    
+           dishStars.forEach((star, j) => {
+            if(current_star_level >= j + 1) {
+            star.innerHTML = "&#9733";
+            }else {
+            star.innerHTML= "&#9734";
+           } } ) 
+           localStorage.setItem(dish[i] + "rating",current_star_level)
+        }
     }
+    )
 }
-)
+
+localStorage.getItem
 
 
 let search = document.getElementById("search")
@@ -48,7 +54,6 @@ searchInput.addEventListener("input", e => {
         dish.toLowerCase().includes(value)
         recipes.toggle("hide", !isVisible)
     }
-
     )
 
 })

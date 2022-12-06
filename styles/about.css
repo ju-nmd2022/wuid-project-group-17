@@ -27,7 +27,6 @@ body {
   flex: 50%;
 }
 .about_photo {
-  background: url(about.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
