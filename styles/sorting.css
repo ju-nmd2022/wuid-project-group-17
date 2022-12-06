@@ -1,60 +1,130 @@
+:root {
+  --primary: #ff9173;
+  --light: #f2f1ef;
+  --dark: #212121;
+}
+
 * {
-  font-family: Roboto Condensed;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgb(240, 240, 230);
   border: 0;
-  margin-top: 1%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
+  margin-left: 4%;
+  margin-right: 4%;
 }
-.topnav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  font-family: skia;
-  padding: 1em;
-  font-size: 1.5em;
-  gap: 1em;
-  text-align: center;
+
+/* ----------------the following topnav code is merged from Takoda---------------- */
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  font-family: "Roboto Condensed", sans-serif;
 }
-.topnav a,
-.dish a {
-  text-decoration: none;
-  color: black;
+.container img {
+  height: 12vh;
+  width: auto;
 }
-#search-input {
-  border: none;
-  padding: 1em;
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
   background-color: rgb(240, 240, 230);
-  visibility: hidden;
+  padding: 1em;
 }
-.searching-area {
-  display: grid;
-  grid-template-columns: 20% 1fr;
-  overflow: hidden;
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
+
+.hamburger span {
+  color: var(--dark);
+  font-size: 2rem;
+}
+
+.menu {
+  display: none;
+  flex: 1 1 0%;
   align-items: center;
+  justify-content: center;
+  margin: 0px -16px;
 }
-.searching-area img {
-  object-fit: contain;
+
+.menu a {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+
+  color: var(--dark);
+  margin: 0 16px;
+  text-decoration: none;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 15px;
+  font-size: 1.5em;
 }
-.header {
-  display: grid;
-  grid-template-columns: 30% 1fr;
-  grid-template-rows: 1fr 30%;
-  margin-bottom: 3%;
+
+.menu a.active,
+.menu a:hover {
+  background-color: var(--primary);
 }
-.sorting {
-  /* font-family: skia; */
-  font-size: 2.5em;
-  grid-column: 1/3;
-}
-.header img {
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  z-index: 98;
+
+  padding-top: 6rem;
+  opacity: 0;
+  transform: translateY(-100%);
+  background-color: var(--dark);
+  color: var(--light);
+  transition: 0.3s;
 }
+
+.mobile-menu.is-open {
+  opacity: 95%;
+  transform: translateY(0);
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 1rem;
+  color: var(--light);
+  text-align: center;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: var(--dark);
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+/* -------------Jies previous coding -------------------*/
+
 .dish {
   display: grid;
   grid-template-columns: 40% 1fr;
@@ -66,16 +136,21 @@ body {
   object-fit: cover;
   border-radius: 2%;
 }
+.dish a {
+  color: black;
+  text-decoration: none;
+}
 h1 {
   font-size: 2.5em;
 }
 p {
   font-size: 1.5em;
 }
-.container {
+.recipe-container {
   display: grid;
   grid-template-rows: auto;
   gap: 2em;
+  margin-top: 15%;
 }
 
 /* star rating session */
@@ -94,42 +169,37 @@ p {
 
 /* responsive */
 
-@media screen and (min-width: 425px) and (max-width: 769px) {
-  body {
-    margin-left: 8%;
-    margin-right: 8%;
+@media screen and (min-width: 769px) {
+  /* the following code is for dorpdown menu */
+  .mobile-menu,
+  .hamburger {
+    display: none;
   }
-  .header {
-    grid-template-columns: 45% 1fr;
+  .menu {
+    display: flex;
   }
-  .dish img {
-    height: 28vh;
-  }
+}
+
+@media (min-width: 425px) and (max-width: 769px) {
   h1 {
     font-size: 2em;
   }
   p {
     font-size: 1.3em;
   }
-  .sorting {
-    font-size: 2em;
+  .recipe-container {
+    margin-top: 18%;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media (max-width: 425px) {
   .dish {
     grid-template-columns: 1fr;
     gap: 5%;
   }
-  body {
-    margin-left: 6%;
-    margin-right: 6%;
-  }
-  .header {
-    grid-template-columns: 70% 1fr;
-  }
+
   .dish img {
-    height: 25vh;
+    height: 40vh;
   }
   h1 {
     font-size: 1.8em;
@@ -137,7 +207,7 @@ p {
   p {
     font-size: 1em;
   }
-  .sorting {
-    font-size: 1.8em;
+  .recipe-container {
+    margin-top: 12%;
   }
 }
