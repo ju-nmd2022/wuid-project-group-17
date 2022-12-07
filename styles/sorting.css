@@ -150,7 +150,7 @@ p {
   display: grid;
   grid-template-rows: auto;
   gap: 2em;
-  margin-top: 15%;
+  margin-top: 14%;
 }
 
 /* star rating session */
@@ -169,7 +169,7 @@ p {
 
 /* responsive */
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 780px) {
   /* the following code is for dorpdown menu */
   .mobile-menu,
   .hamburger {
@@ -180,15 +180,17 @@ p {
   }
 }
 
-@media (min-width: 425px) and (max-width: 769px) {
+@media (min-width: 425px) and (max-width: 780px) {
+  .dish {
+    grid-template-columns: 1fr;
+    gap: 5%;
+  }
+
   h1 {
     font-size: 2em;
   }
   p {
     font-size: 1.3em;
-  }
-  .recipe-container {
-    margin-top: 18%;
   }
 }
 
@@ -206,8 +208,5 @@ p {
   }
   p {
     font-size: 1em;
-  }
-  .recipe-container {
-    margin-top: 12%;
   }
 }
