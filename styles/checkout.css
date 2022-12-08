@@ -1,0 +1,118 @@
+:root {
+  --primary: #ff9173;
+  --light: #f2f1ef;
+  --dark: #212121;
+}
+#form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#delivery_info {
+  margin-top: 5%;
+  display: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #d8d8cf, #fffff6);
+  box-shadow: 16px 16px 32px #b4b4ad, -16px -16px 32px #ffffff;
+  width: 200px;
+}
+h1 {
+  text-align: center;
+}
+#shipping_info {
+  margin-top: 5%;
+  display: column;
+  flex-direction: row;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #d8d8cf, #fffff6);
+  box-shadow: 16px 16px 32px #b4b4ad, -16px -16px 32px #ffffff;
+  width: 200px;
+}
+#payment_info {
+  margin-top: 5%;
+  display: column;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #d8d8cf, #fffff6);
+  box-shadow: 16px 16px 32px #b4b4ad, -16px -16px 32px #ffffff;
+  width: 200px;
+}
+input {
+  border-radius: 10px;
+  border: 1px;
+}
+#complete {
+  display: flex;
+  justify-content: center;
+}
+#complete_order {
+  color: #403e3e;
+  border-radius: 10px;
+  border-color: var(--primary);
+  background: linear-gradient(145deg, #d8d8cf, #fffff6);
+  box-shadow: 16px 16px 32px #b4b4ad, -16px -16px 32px #ffffff;
+}
+#complete_order :hover {
+  background-color: var(--primary);
+}
+#finish_purchase_background {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.384);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#popup {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  max-width: 400px;
+  margin: auto;
+  background-color: rgb(240, 240, 230);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+  justify-content: space-evenly;
+  border-radius: 10px;
+}
+#close_button {
+  width: 15%;
+  margin-left: 40%;
+  color: #403e3e;
+  border-radius: 10px;
+  border-color: var(--primary);
+  background: linear-gradient(145deg, #d8d8cf, #fffff6);
+  box-shadow: 16px 16px 32px #b4b4ad, -16px -16px 32px #ffffff;
+}
+a {
+  text-decoration: none;
+}
+@media screen and (max-width: 1860px) {
+  #delivery_info,
+  #shipping_info,
+  #payment_info {
+    margin-top: 5%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #form {
+    flex-direction: column;
+    align-items: center;
+  }
+}
