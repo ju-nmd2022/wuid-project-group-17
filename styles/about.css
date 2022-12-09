@@ -78,7 +78,7 @@ a:hover {
     margin-right: 0%;
   }
   h1 {
-    margin-top: 70%;
+    margin-top: 120%;
     margin-bottom: auto;
     margin-left: 45%;
   }
@@ -88,15 +88,15 @@ a:hover {
 }
 @media screen and (max-width: 630px) {
   h1 {
-    margin-top: 50%;
+    margin-top: 100%;
     margin-bottom: auto;
     margin-left: 45%;
   }
 }
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   h1 {
     margin-top: 30%;
     margin-bottom: auto;
     margin-left: 45%;
   }
-}
+} */
