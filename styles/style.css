@@ -12,7 +12,7 @@
   font-size: 18px;
 }
 body {
-  background-color: rgb(240, 240, 230);
+  background-color: var(--light);
 }
 /* ---------------------Navbar, made using the following tutorial from Tyler Potts https://youtu.be/ZzQdVy8b8n4 --------------------------- */
 .container {
