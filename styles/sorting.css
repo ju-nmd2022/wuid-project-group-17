@@ -63,7 +63,7 @@ body {
   display: none;
   flex: 1 1 0%;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin: 0px -16px;
 }
 
