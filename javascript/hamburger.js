@@ -14,3 +14,7 @@ hamburger.addEventListener("click", () => {
 
   mobile_menu.classList.toggle("is-open");
 });
+
+// Made Using Guides Below Used for Reference
+// https://youtu.be/ZzQdVy8b8n4
+// https://youtu.be/At4B7A4GOPg
