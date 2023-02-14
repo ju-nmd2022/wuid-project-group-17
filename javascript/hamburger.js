@@ -16,5 +16,6 @@ hamburger.addEventListener("click", () => {
 });
 
 // Made Using Guides Below Used for Reference
-// https://youtu.be/ZzQdVy8b8n4
-// https://youtu.be/At4B7A4GOPg
+// https://www.youtube.com/watch?v=JKjya8hngII Tyler Potts
+// https://youtu.be/ZzQdVy8b8n4 Tyler Potts
+// https://youtu.be/At4B7A4GOPg Web Dev Simplified
